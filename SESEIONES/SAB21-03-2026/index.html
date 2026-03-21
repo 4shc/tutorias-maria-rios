@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio de Sesión</title>
+</head>
+
+<body>
+  <h2>Iniciar Sesión</h2>
+
+  <form id="loginForm">
+    <label for="email">Email:</label>
+    <input type="email" id="email" required><br><br>
+
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" required><br><br>
+
+    <button type="submit">Ingresar</button>
+  </form>
+
+  <br>
+
+  <!-- 🔥 Botón para ir a registro -->
+  <button onclick="irARegistro()">Ir a Registrarse</button>
+
+  <script>
+    const form = document.getElementById('loginForm');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      let users = JSON.parse(localStorage.getItem('users')) || [];
+
+      const userEncontrado = users.find(user => 
+        user.email === email && user.password === password
+      );
+
+      if (userEncontrado) {
+        localStorage.setItem('userActivo', JSON.stringify(userEncontrado));
+        window.location.href = 'user.html';
+      } else {
+        alert('Credenciales incorrectas ❌');
+      }
+    });
+
+    function irARegistro() {
+      window.location.href = 'form-registro.html'; // 👈 nombre de tu otro archivo
+    }
+  </script>
+</body>
+</html>
