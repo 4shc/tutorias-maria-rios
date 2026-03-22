@@ -72,3 +72,31 @@ btnCerrarSesion.addEventListener('click', ()=>{
 function alerts(){
   alert('doble clic')
 }
+
+
+// Función para cambiar estilos. 
+
+const btnCambiarEstilos = document.getElementById('btn-cambiar-estilos');
+const body = document.body;
+
+let estado = 0;
+
+btnCambiarEstilos?.addEventListener('click',(e)=>{
+
+  body.classList.remove('estilos-nuevos-uno', 'estilos-nuevos-dos');
+
+  if(estado === 0 ){
+    body.classList.add('estilos-nuevos-uno');
+    estado = 1;
+    alert('Estilo uno asignado')
+  }else if(estado === 1){
+    body.classList.add('estilos-nuevos-dos');
+    estado = 2;
+    alert('Estilo dos asignado')
+  }else{
+    estado = 0;
+    alerts('Estilos inicial asignado');
+  }
+
+
+})

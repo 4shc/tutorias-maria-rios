@@ -271,7 +271,7 @@ header{
 }
 
 .formRegistro-content{
-  max-width: 900px;
+  max-width: 400px;
   margin: auto;
   padding: 0 1em;
 }
@@ -291,4 +291,38 @@ header{
   width: 250px;
   height: 35px;
   text-align: center;
+}
+
+/* Estilos para la función que cambia estilos */
+.estilos-nuevos-uno{
+    background: linear-gradient(
+    135deg,
+    #f5f7f7f2 0%,
+    #b9bbd3db 40%,
+    #f1ebf2 100%
+  );
+  & a{
+    color: #bd0ddc;
+    font-weight: bold;
+  }
+  & button{
+    background-color: #bd0ddc;
+  }
+}
+
+
+.estilos-nuevos-dos{
+    background: linear-gradient(
+    135deg,
+    #707474f2 0%,
+    #121719db 40%,
+    #878088 100%
+  );
+  & a{
+    color: #6fd813;
+    font-weight: bold;
+  }
+  & button{
+    background-color: #6fd813;
+  }
 }
