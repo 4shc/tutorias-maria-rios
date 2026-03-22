@@ -3,12 +3,14 @@ html *{
   padding: 0;
   box-sizing: border-box;
 }
+a{
+  color: #9e7b0a;
+}
 a:visited {
   color: inherit; /* quita el morado */
 }
-
 a:active {
-  color: #0056b3;
+  color: #9e7b0a;
 }
 
 body{
@@ -45,6 +47,7 @@ body{
 
 .enlace-activo{
   font-weight: bold;
+  border-bottom: 3px solid rgb(116, 114, 114);
 }
 
 header{
@@ -62,7 +65,7 @@ header{
 
 .nav ul{
   display: flex;
-  gap: 1em;
+  gap: 1.5em;
 }
 
 .nav ul li{
@@ -113,7 +116,9 @@ header{
   border-radius: .55em .55em 1em 1em;
 }
 
-.loginForm-inputs{
+/* Estilos para los formularios */
+.loginForm-inputs,
+.formRegistro-inputs{
   padding-top: .55em;
   padding-bottom: 1em;
   display: flex;
@@ -122,7 +127,8 @@ header{
   
 }
 
-.loginForm-inputs input{
+.loginForm-inputs input,
+.formRegistro-inputs input{
   height: 30px;
   padding: 0 .55em;
   border: solid #b8bcbd 1px;
@@ -150,15 +156,17 @@ header{
 
 
 /*
-  Estilos para la página de usuario
+  Estilos para la página de usuario y registro de formulario
 */
-.intro-user-container{
+.intro-user-container,
+.intro-formRegistro-container{
   background-image: url('../img/img-fondo-uno.webp');
   min-height: 270px;
   background-size: cover;
   background-position: center;
 }
-.intro-user-content{
+.intro-user-content,
+.intro-formRegistro-content{
   position: relative;
   padding: 0 1em;
   margin: auto;
@@ -166,7 +174,8 @@ header{
   min-height: 270px;
 
 }
-.intro-user-content-title{
+.intro-user-content-title,
+.intro-formRegistro-title{
   padding: 2.5em 5em 2em;
   line-height: 3em;
 }
@@ -242,4 +251,44 @@ header{
 }
 .citas-table tbody tr:hover {
   background-color: #f5f7f8;
+}
+
+
+/* 
+ Estilos para el registro de formulario
+*/
+
+.intro-formRegistro-container{
+  background-image: url('../img/img-fondo-dos.webp');
+}
+
+.intro-formRegistro-content .intro-user-img-doc{
+  width: 270px;
+  position: absolute;
+  right: 1em;
+  bottom: -.55em;
+  z-index: 5;
+}
+
+.formRegistro-content{
+  max-width: 900px;
+  margin: auto;
+  padding: 0 1em;
+}
+.formRegistro-content h2{
+
+  padding: 1em 0;
+}
+
+.formRegistro-btns{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+}
+
+.formRegistro-btns button{
+  width: 250px;
+  height: 35px;
+  text-align: center;
 }
