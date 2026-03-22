@@ -1,0 +1,145 @@
+html *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: "Inter", sans-serif;
+}
+
+.enlace-activo{
+  font-weight: bold;
+}
+
+
+header{
+  display: flex;
+  margin:auto;
+  max-width: 900px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1em;
+}
+
+.img-logo{
+  width: 90px;
+}
+
+.nav ul{
+  display: flex;
+  gap: 1em;
+}
+
+.nav ul li{
+  list-style: none;
+}
+
+.nav ul li a{
+  text-decoration: none;
+  transition: border ease-in .3s ;
+}
+.nav ul li a:hover{
+  border-bottom: 3px solid rgb(116, 114, 114);
+
+}
+
+.main{
+ 
+  min-height: 40vh;
+  padding-top: 40%;
+  background-image: url('../img/img-fondo.jpg');
+  background-size: cover;
+  background-position: center;
+  
+}
+
+.loginForm-container{
+  max-width: 900px;
+  margin: auto;
+  padding-top: 40%;
+  min-height: 40vh;
+  position: relative;
+  margin-top: -40%;
+}
+
+.loginForm{
+  position: absolute;
+  right: 20px;
+  bottom: 20%;
+  background-color: #ffffffb5;
+  max-width: 255px;
+  padding: 1em;
+  border-radius: .25em;
+}
+
+.loginForm input{
+  height: 25px;
+}
+
+.loginForm button[type="submit"]{
+  background-color: #6f6b6b;
+  color: aliceblue;
+  border: none;
+  padding: .55em 2em;
+}
+
+
+
+
+/*
+  Estilos para la página de usuario
+*/
+.intro-user-container{
+  background-image: url('../img/img-fondo-uno.webp');
+  min-height: 270px;
+  background-size: cover;
+  background-position: center;
+}
+.intro-user-content{
+  position: relative;
+  padding: 0 1em;
+  margin: auto;
+  max-width: 900px;
+  min-height: 270px;
+
+}
+.intro-user-img-doc{
+  width: 225px;
+  position: absolute;
+  right: 1em;
+  bottom: -2em;
+  z-index: 5;
+}
+
+.citas-container{
+
+}
+.citas-container-content{
+  padding: 0 1em;
+  margin: auto;
+  max-width: 900px;
+}
+
+.citas-table-container{
+
+}
+
+.citas-table{
+  position: relative;
+  border-collapse: collapse;
+  background-color: #fffafa;
+  width: 100%;
+  z-index: 10;
+  border-radius: 45px;
+}
+
+.citas-table thead{
+  background-color: #ccc;
+  height: 2em;
+
+}
+.citas-table tbody tr{
+  border-top: solid 1px #cdc;
+  height: 2em;
+}

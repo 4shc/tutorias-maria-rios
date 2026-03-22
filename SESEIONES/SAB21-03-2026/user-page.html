@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="./css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Fuente -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  <title>Página de usuario</title>
+</head>
+<body>
+  <div class="layout">
+    <header>
+
+      <div class="logo">
+        <img class="img-logo" src="./img/logo.jpg" alt="Logo Dental Center">
+      </div>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="./home.html">Inicio</a></li>
+          <li><a href="./form-registro.html">Registro Usuarios</a></li>
+          <li><a href="#">Tratamientos</a></li>
+          <li><a href="#">Agendar cita</a></li>
+          <button id="btnCerrarSesion">Cerrar sesión</button>
+        </ul>
+      </nav>
+      
+    </header>
+
+    <main class="main-user">
+
+
+      <section class="intro-user-container">
+
+        <div class="intro-user-content">
+          <h1>Hola, <span id="user"></span></h1>
+          <h2>Gestión de tus citas dentales</h2>
+          <button>Programar nueva cita ></button>
+          <img class="intro-user-img-doc" src="./img/doc-uno.png" alt="">
+        </div>
+    
+      </section>
+
+
+      
+      <section class="citas-container">
+        <div class="citas-container-content">
+          <h2>Tus citas</h2>
+        <div class="citas-table-container">
+          <table class="citas-table">
+            <thead>
+              <tr>
+                <th>Fecha</th><th>Hora</th><th>Tratamiento</th><th>Doctor</th><th>Estado</th>
+              </tr>
+            </thead>
+              <tr>
+                <td>25/05/20224</td><td>03:00 PM</td> <td>Limpieza</td> <td>Maria Rios</td> <td><button>confirmado</button></td>
+              </tr>
+              <tr>
+                <td>25/05/20224</td><td>03:00 PM</td> <td>Limpieza</td> <td>Maria Rios</td> <td><button>confirmado</button></td>
+              </tr>
+              <tr>
+                <td>25/05/20224</td><td>03:00 PM</td> <td>Limpieza</td> <td>Maria Rios</td> <td><button>confirmado</button></td>
+              </tr>
+              <tr>
+                <td>25/05/20224</td><td>03:00 PM</td> <td>Limpieza</td> <td>Maria Rios</td> <td><button>confirmado</button></td>
+              </tr>
+            <tbody>
+
+            </tbody>
+          </table>
+        </div>
+        </div>
+      </section>
+
+
+
+    </main>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+
+
+    <script src="./js/script-registro.js"></script>
+</body>
+</html>
