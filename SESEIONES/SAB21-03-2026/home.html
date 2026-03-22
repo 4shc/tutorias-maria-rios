@@ -25,7 +25,7 @@
           <li class="enlace-activo">Inicio</li>
           <li><a href="./form-registro.html">Registro Usuarios</a></li>
           <li><a href="#">Tratamientos</a></li>
-          <li><a href="#">Agendar cita</a></li>
+          <li><button class="btn-principal">Agendar cita</button></li>
         </ul>
       </nav>
 
@@ -37,13 +37,16 @@
     <div class="loginForm">
       <h2>Iniciar sesión</h2>
       <form id="loginForm">
-
-        <input type="email" id="email" required placeholder="Correo"><br>
-        <input type="password" id="password" required placeholder="Contraseña"><br>
-        <input type="checkbox" name="" id=""> Recuérdame<br>
-        <button type="submit">Iniciar sesión</button>
-        <p>¿Olvidaste tu contraseña?</p>
-        <p>¿Eres nuevo? <span onclick="irRegistro()">Regístrate aquí</span></p>
+        <div class="loginForm-inputs">
+          <input type="email" id="email" required placeholder="Correo">
+          <input type="password" id="password" required placeholder="Contraseña">
+          <div class="recuerdame"><input type="checkbox" name="" id=""> Recuérdame</div>
+          <button class="btn-principal" type="submit">Iniciar sesión</button>
+          <p>¿Olvidaste tu contraseña?</p>
+          <p>¿Eres nuevo? <span class="btn-enlace" onclick="irRegistro()">Regístrate aquí</span></p>
+        </div>
+        
+        
       </form>
     </div>
   </div>

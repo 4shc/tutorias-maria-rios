@@ -3,15 +3,49 @@ html *{
   padding: 0;
   box-sizing: border-box;
 }
+a:visited {
+  color: inherit; /* quita el morado */
+}
+
+a:active {
+  color: #0056b3;
+}
 
 body{
   font-family: "Inter", sans-serif;
+}
+.btn-enlace{
+  color: #b9910e;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.btn-principal{
+  all: unset;
+  background-color: #a1a1aa;
+  color: #fffefe;
+  border-radius: 4px;
+  padding: .25em .95em ;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.123);
+  transition: transform ease-in .2s;
+  &:hover{
+   transform: scale(1.02);
+  }
+}
+.btn-secundario{
+  all: unset;
+  font-size: 12px;
+  background-color: #e2e2df;
+  border-radius: 4px;
+  padding: .25em .95em ;
+  transition: transform ease-in .2s;
+  &:hover{
+   transform: scale(1.02);
+  }
 }
 
 .enlace-activo{
   font-weight: bold;
 }
-
 
 header{
   display: flex;
@@ -33,11 +67,13 @@ header{
 
 .nav ul li{
   list-style: none;
+  display: flex;
+  align-items: center;
 }
 
 .nav ul li a{
   text-decoration: none;
-  transition: border ease-in .3s ;
+  transition: border ease-in .1s ;
 }
 .nav ul li a:hover{
   border-bottom: 3px solid rgb(116, 114, 114);
@@ -45,8 +81,7 @@ header{
 }
 
 .main{
- 
-  min-height: 40vh;
+  min-height: 60vh;
   padding-top: 40%;
   background-image: url('../img/img-fondo.jpg');
   background-size: cover;
@@ -58,7 +93,7 @@ header{
   max-width: 900px;
   margin: auto;
   padding-top: 40%;
-  min-height: 40vh;
+  min-height: 60vh;
   position: relative;
   margin-top: -40%;
 }
@@ -67,21 +102,48 @@ header{
   position: absolute;
   right: 20px;
   bottom: 20%;
-  background-color: #ffffffb5;
-  max-width: 255px;
-  padding: 1em;
-  border-radius: .25em;
+  background: linear-gradient(
+    135deg,
+    #f7f5f5d5 0%,
+    #ffffff86 40%,
+    #ffffff 100%
+  );
+  width: 277px;
+  padding: 1.88em;
+  border-radius: .55em .55em 1em 1em;
 }
 
-.loginForm input{
-  height: 25px;
+.loginForm-inputs{
+  padding-top: .55em;
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: .55em;
+  
+}
+
+.loginForm-inputs input{
+  height: 30px;
+  padding: 0 .55em;
+  border: solid #b8bcbd 1px;
+  border-radius: 4px;
+}
+.loginForm-inputs .recuerdame{
+  display: flex;
+  align-items: center;
+  gap: .25em;
+  font-size: .88em;
+}
+.loginForm-inputs p{
+  font-size: .85em;
 }
 
 .loginForm button[type="submit"]{
-  background-color: #6f6b6b;
+  background-color: #717179;
   color: aliceblue;
   border: none;
   padding: .55em 2em;
+  text-align: center;
 }
 
 
@@ -104,42 +166,80 @@ header{
   min-height: 270px;
 
 }
+.intro-user-content-title{
+  padding: 2.5em 5em 2em;
+  line-height: 3em;
+}
+
+.intro-user-content-title h1{
+  font-weight: 400;
+}
+.intro-user-content-title button{
+  margin-top: 1em;
+  line-height: 2em;
+}
+
 .intro-user-img-doc{
-  width: 225px;
+  width: 310px;
   position: absolute;
-  right: 1em;
-  bottom: -2em;
+  right: 5em;
+  bottom: -5em;
   z-index: 5;
 }
 
 .citas-container{
-
+  
 }
 .citas-container-content{
   padding: 0 1em;
   margin: auto;
   max-width: 900px;
 }
-
-.citas-table-container{
-
+.citas-container-content h2{
+  padding: 1em 0;
+  display: flex;
+  gap: .55em ;
+  align-items: center;
 }
+.citas-container-content h2 div{
+    background-color: #f5f7f8;
+    height: 4px;
+    width: 50%;
+  }
 
-.citas-table{
-  position: relative;
-  border-collapse: collapse;
-  background-color: #fffafa;
+.citas-table-container {
+  border-radius: .45em;
+  overflow: hidden; /* 🔥 clave */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   width: 100%;
+}
+.citas-table {
+  position: relative;
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fdfdfd;
   z-index: 10;
-  border-radius: 45px;
+}
+.citas-table thead {
+  background-color: #e9ebeb;
+}
+.citas-table thead tr {
+  height: 45px;
+}
+.citas-table thead th {
+  text-align: left;
+  padding: 10px;
+  font-weight: 600;
+}
+.citas-table tbody tr {
+  border-top: 1px solid #ccd8dd;
+  height: 45px;
+  transition: background 0.2s ease;
 }
 
-.citas-table thead{
-  background-color: #ccc;
-  height: 2em;
-
+.citas-table tbody td {
+  padding: 10px;
 }
-.citas-table tbody tr{
-  border-top: solid 1px #cdc;
-  height: 2em;
+.citas-table tbody tr:hover {
+  background-color: #f5f7f8;
 }
